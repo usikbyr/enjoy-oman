@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enjoy Oman | L'Art du Voyage d'Exception</title>
-    <meta name="description" content="Découvrez Oman à travers des expériences de voyage luxueuses et authentiques. De Salalah au désert de Wahiba, l'élégance à chaque étape.">
+    <meta name="description"
+        content="Découvrez Oman à travers des expériences de voyage luxueuses et authentiques. De Salalah au désert de Wahiba, l'élégance à chaque étape.">
     <link rel="stylesheet" href="style.css">
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .tour-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(197, 160, 89, 0.9);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .tour-price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 0.8rem;
+            margin-top: 10px;
+            display: block;
+            opacity: 0.9;
+        }
+    </style>
 </head>
+
 <body x-data="{ scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)">
 
     <!-- Navigation -->
@@ -16,8 +42,8 @@
         <nav>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#tours">Nos Circuits</a></li>
+                <li><a href="#philosophie">Philosophie</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -28,65 +54,114 @@
         <div>
             <span>BIENVENUE DANS LE SULTANAT</span>
             <h1>L'Art de Voyager</h1>
-            <p>Oman ne se visite pas, il se ressent. Découvrez une terre de contrastes où le luxe rencontre l'authenticité ancestrale.</p>
-            <a href="#experiences" class="cta-button">Découvrir nos expériences</a>
+            <p>Oman ne se visite pas, il se ressent. Découvrez une terre de contrastes où le luxe rencontre
+                l'authenticité ancestrale.</p>
+            <a href="#tours" class="cta-button">Découvrir nos circuits</a>
         </div>
     </section>
 
     <!-- Intro Section -->
-    <section class="section">
+    <section id="philosophie" class="section">
         <div class="section-title">
             <span>Notre Philosophie</span>
             <h2>Une Quête d'Absolu</h2>
         </div>
         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p style="font-size: 1.1rem; color: #4B5563;">
-                Depuis les montagnes escarpées du Jebel Akhdar jusqu'aux dunes de cuivre du Wahiba, <strong>Enjoy Oman</strong> personnalise chaque itinéraire avec une précision d'orfèvre. Nous croyons que le vrai luxe réside dans les moments de silence sous les étoiles et l'accueil chaleureux d'un peuple fier de son héritage.
+                Depuis les montagnes escarpées du Jebel Akhdar jusqu'aux dunes de cuivre du Wahiba, <strong>Enjoy
+                    Oman</strong> personnalise chaque itinéraire avec une précision d'orfèvre. Nous croyons que le vrai
+                luxe réside dans les moments de silence sous les étoiles et l'accueil chaleureux d'un peuple fier de son
+                héritage.
             </p>
         </div>
     </section>
 
-    <!-- Experiences Section -->
-    <section id="experiences" class="section" style="background-color: #fff;">
+    <!-- Tours Section -->
+    <section id="tours" class="section" style="background-color: #fff;">
         <div class="section-title">
-            <span>Évasion Privée</span>
-            <h2>Expériences Exclusives</h2>
+            <span>Circuits Signature</span>
+            <h2>Évasions Exclusives</h2>
         </div>
-        
+
         <div class="experiences-grid">
-            <!-- Experience 1: Desert -->
+            <!-- Tour 1: Desert -->
             <div class="exp-card">
+                <span class="tour-badge">4 Jours</span>
                 <img src="enjoy_oman_hero_1772119151573.png" alt="Désert de Wahiba">
                 <div class="exp-overlay">
                     <h3>Nuits de Cuivre</h3>
-                    <p>Campement privé au cœur des dunes dorées du Wahiba Sands.</p>
+                    <p>Une immersion totale dans le désert de Wahiba avec nuitées dans un campement privé ultra-luxe.
+                    </p>
+                    <span class="tour-price">À partir de 1 200 OMR</span>
                 </div>
             </div>
 
-            <!-- Experience 2: Mountain -->
+            <!-- Tour 2: Mountain -->
             <div class="exp-card">
+                <span class="tour-badge">3 Jours</span>
                 <img src="enjoy_oman_mountain_1772119220541.png" alt="Montagnes du Jebel Akhdar">
                 <div class="exp-overlay">
-                    <h3>Les Montagnes Célestes</h3>
-                    <p>Retraite exclusive sur les sommets du Jebel Akhdar.</p>
+                    <h3>L'Altitude Sacrée</h3>
+                    <p>Évasion sur le plateau de Jebel Akhdar, visite des jardins en terrasses et dégustation de
+                        produits locaux.</p>
+                    <span class="tour-price">À partir de 950 OMR</span>
                 </div>
             </div>
 
-            <!-- Experience 3: Sea -->
+            <!-- Tour 3: Sea -->
             <div class="exp-card">
+                <span class="tour-badge">6 Jours</span>
                 <img src="enjoy_oman_sea_1772119242714.png" alt="Fjords du Musandam">
                 <div class="exp-overlay">
-                    <h3>Azure & Sérénité</h3>
-                    <p>Navigation privée le long des fjords du Musandam.</p>
+                    <h3>Odyssée Musandam</h3>
+                    <p>Croisière privée en Dhow traditionnel à travers les fjords, observation des dauphins et plongée.
+                    </p>
+                    <span class="tour-price">À partir de 2 100 OMR</span>
+                </div>
+            </div>
+
+            <!-- Tour 4: Muscat & Tradition -->
+            <div class="exp-card">
+                <span class="tour-badge">2 Jours</span>
+                <img src="enjoy_oman_souq_1772120557875.png" alt="Mascate Mutrah Souq">
+                <div class="exp-overlay">
+                    <h3>Mascate Authentique</h3>
+                    <p>Découverte privée de la Grande Mosquée, du Souq de Mutrah et dîner gastronomique omanais.</p>
+                    <span class="tour-price">À partir de 450 OMR</span>
+                </div>
+            </div>
+
+            <!-- Tour 5: Oasis & Wadis -->
+            <div class="exp-card">
+                <span class="tour-badge">5 Jours</span>
+                <img src="enjoy_oman_wadis_1772120578017.png" alt="Wadi Bani Khalid">
+                <div class="exp-overlay">
+                    <h3>Sources d'Émeraude</h3>
+                    <p>Parcours des Wadis les plus secrets, baignade dans les eaux cristallines et pique-nique de luxe.
+                    </p>
+                    <span class="tour-price">À partir de 1 450 OMR</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer style="padding: 60px 5%; background: #0F172A; color: #fff; text-align: center;">
+    <!-- Additional Section for engagement -->
+    <section class="section" style="background-color: #0F172A; color: white; text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Prêt pour l'Exceptionnel ?</h2>
+            <p style="opacity: 0.8; margin-bottom: 3rem;">Nos experts créent votre itinéraire sur-mesure pour une
+                expérience inoubliable à Oman.</p>
+            <a href="mailto:contact@enjoyoman.com" class="cta-button">Demander un Devis Privé</a>
+        </div>
+    </section>
+
+    <footer
+        style="padding: 60px 5%; background: #0F172A; color: #fff; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
         <div class="logo" style="margin-bottom: 2rem;">Enjoy Oman</div>
-        <p style="opacity: 0.6; font-size: 0.8rem; letter-spacing: 1px;">© 2026 Enjoy Oman - Luxury Travel Specialist. Tous droits réservés.</p>
+        <p style="opacity: 0.6; font-size: 0.8rem; letter-spacing: 1px;">© 2026 Enjoy Oman - Spécialiste du Voyage de
+            Luxe. Tous droits réservés.</p>
     </footer>
 
 </body>
+
 </html>
